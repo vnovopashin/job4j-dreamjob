@@ -1,7 +1,7 @@
 package ru.job4j.dreamjob.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Vasiliy Novopashin
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
  * {@code @date} 05.03.2023
  */
 
-@RestController
+@Controller
 public class IndexController {
     @GetMapping("/index")
     public String getIndex() {
-        return "Hello World!";
+        return "index";
     }
 }
