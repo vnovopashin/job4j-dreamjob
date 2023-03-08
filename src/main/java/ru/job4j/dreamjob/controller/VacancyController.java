@@ -1,5 +1,6 @@
 package ru.job4j.dreamjob.controller;
 
+import net.jcip.annotations.ThreadSafe;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,8 @@ import ru.job4j.dreamjob.service.VacancyService;
  * @version 1.0
  * {@code @date} 05.03.2023
  */
+
+@ThreadSafe
 @Controller
 @RequestMapping("/vacancies")
 public class VacancyController {
