@@ -31,14 +31,14 @@ public class SimpleFileService implements FileService {
     /**
      * Конструктор
      *
-     * @param fileRepository   инициализирует репозиторий
+     * @param sql2oFileRepository   инициализирует репозиторий
      * @param storageDirectory позволяет подставить на место storageDirectory
      *                         значение из файла application.properties
      *                         с ключом file.directory
      */
-    public SimpleFileService(FileRepository fileRepository,
+    public SimpleFileService(FileRepository sql2oFileRepository,
                              @Value("${file.directory}") String storageDirectory) {
-        this.fileRepository = fileRepository;
+        this.fileRepository = sql2oFileRepository;
         this.storageDirectory = storageDirectory;
         createStorageDirectory(storageDirectory);
     }
