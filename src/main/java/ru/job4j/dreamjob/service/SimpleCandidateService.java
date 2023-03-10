@@ -8,7 +8,6 @@ import ru.job4j.dreamjob.repository.CandidateRepository;
 
 import java.util.Collection;
 import java.util.Optional;
-import java.util.concurrent.ForkJoinPool;
 
 /**
  * Класс выполняет бизнес логику приложения
@@ -26,8 +25,8 @@ public class SimpleCandidateService implements CandidateService {
 
     private final FileService fileService;
 
-    public SimpleCandidateService(CandidateRepository candidateRepository, FileService fileService) {
-        this.candidateRepository = candidateRepository;
+    public SimpleCandidateService(CandidateRepository sql2oCandidateRepository, FileService fileService) {
+        this.candidateRepository = sql2oCandidateRepository;
         this.fileService = fileService;
     }
 
